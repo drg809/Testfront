@@ -9,14 +9,14 @@ import { UsersService } from './services/users.service';
 export class AppComponent {
   constructor(private userService: UsersService) {
   }
-  title = 'bootcamptallerangular5';
+  title = 'MarketPlace';
   userId = localStorage.getItem('id');
   public navBar = {
     isNavbarCollapsed: true,
-    propietarios: {
+    produtos: {
       dropdown: true
     },
-    vets: {
+    usuarios: {
       dropdown: true
     }
   };

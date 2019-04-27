@@ -1,0 +1,32 @@
+<div class="container">
+  <form class="form-hotizontal" #productForm="ngForm" (ngSubmit)="onSubmit(productForm.value)">
+
+    <div class="form-group">
+      <label>Nombre: </label>
+      <input type="hidden" required [(ngModel)]="product.seller_id" name="seller_id" #seller_id="ngModel">
+      <input type="text" class="form-control" required [(ngModel)]="product.name" name="name" #name="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label>Precio: </label>
+      <input type="text" class="form-control" required [(ngModel)]="product.price" name="price" #price="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label>Descripción: </label>
+      <input type="text" class="form-control" required [(ngModel)]="product.description" name="description" #description="ngModel">
+    </div>
+ 
+
+    <div class="form-group">
+      <button class="btn btn-primary mr-4" type="submit" [disabled]="!productForm.valid">
+        {{textBtn}}
+      </button>
+      <a routerLink="/products">
+        <button class="btn btn-secondary" type="button">
+          Cancelar
+        </button>
+      </a>
+    </div>
+  </form>
+</div>

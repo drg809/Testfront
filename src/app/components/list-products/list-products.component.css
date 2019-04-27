@@ -1,0 +1,21 @@
+table{
+    width: 100%;
+
+}
+table td button{
+    width: 33%;
+}
+ul.pagination{
+    justify-content: center;
+}
+ul.pagination li{
+    border: 1px solid grey;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #8080803b;
+    cursor: pointer;
+}
+ul.pagination li:hover{
+    background-color: #8080806e;
+    font-weight: 700;
+}

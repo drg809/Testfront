@@ -1,0 +1,31 @@
+<h1>Producto</h1>
+<table class="table table-striped">
+  <tr>
+    <th>Id</th>
+    <td><b>{{product.product_id}}</b></td>
+  </tr>
+  <tr>
+    <th>Nombre</th>
+    <td><b>{{product.name}}</b></td>
+  </tr>
+  <tr>
+    <th>Precio</th>
+    <td><b>{{product.price}}</b></td>
+  </tr>
+  <tr>
+    <th>Descripcion</th>
+    <td><b>{{product.description}}</b></td>
+  </tr>
+</table>
+
+<div class="form-group">
+  <button class="btn btn-primary mr-4" type="submit" *ngIf="product.seller_id == userId" (click)="deleteProduct(product.product_id)">
+    Eliminar Producto
+  </button>
+  <a routerLink="/products">
+    <button class="btn btn-secondary" type="button" >
+      Cancelar
+    </button>
+  </a>
+</div>
+

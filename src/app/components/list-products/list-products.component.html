@@ -1,0 +1,46 @@
+<div class="row">
+  <h3 class="col-6">Lista de productos</h3>
+
+  <div class="col-6" *ngIf="userId > 0">
+    <a routerLink="/products-add/-1">
+      <button class="btn btn-primary" type="button">
+        Añadir Producto
+      </button>
+    </a>
+  </div>
+
+</div>
+<table mdbTable>
+  <thead>
+    <tr>
+      <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr mdbTableCol  class="table table-striped" *ngFor="let p of listProducts">
+      <th scope="row">{{p.product_id}}</th>
+      <td>{{p.name}}</td>
+      <td>{{p.price}} €</td>
+      <td>{{p.sellerName}}</td>
+      <td>
+          <button type="button" class="btn btn-secondary" (click)="detailsProduct(p.product_id)">Ver</button>
+          <button type="button" class="btn btn-secondary" *ngIf="p.seller_id == userId" (click)="deleteProduct(p.product_id)">Eliminar</button>
+          <button type="button" class="btn btn-secondary" *ngIf="p.seller_id == userId" (click)="updateProduct(p.product_id)">Editar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<ul class="pagination">
+  <li>
+      <a (click)="cargarPagina(1,10)">First</a>
+  </li>
+  <li>
+      <a (click)="cargarPagina(pager.meta.current_page - 1,10)">Previous</a>
+  </li>
+  <li>
+      <a (click)="cargarPagina(pager.meta.current_page + 1,10)">Next</a>
+  </li>
+  <li>
+      <a (click)="cargarPagina(pager.meta.last_page,10)">Last</a>
+  </li>
+</ul>

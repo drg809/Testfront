@@ -1,10 +1,10 @@
-#INSTRUCCIONES
+# INSTRUCCIONES
 
 Angular ha sido instalado mediante npm, por ello es necesario instalarlo antes de poder instalar angular. Al instalar npm y angular se actualizarán las dependecias utilizadas, si eso no ocurre hay que actualizarlas por consola.
 
 La instalación dependerá del sistema operativo en el que se haga, la información se encuentra facilmente en internet si fuera necesaria.
 
-El proyecto se comunica mendiante http con el back, por ello si durante la configuración del back no se añadío la dirección al fichero host es necesario hacerlo ahora.
+El proyecto se comunica mendiante http con el back, por ello si durante la configuración del back no se añadío la dirección "test.laravel" al fichero host es necesario hacerlo ahora.
 
 A continuación hay que levantar un servidor de prueba mediante el comando "ng serve", este y otros dellates son explicados abajo (esta información la proporciona angular automáticamente al crear el proyecto).
 
